@@ -30,7 +30,7 @@ deb: clean all
 	echo "Section: net" >> deb_pkg/DEBIAN/control
 	echo "Priority: optional" >> deb_pkg/DEBIAN/control
 	echo "Architecture: amd64" >> deb_pkg/DEBIAN/control
-	echo "Maintainer: Your Name <AlexanderRest@git.com>" >> deb_pkg/DEBIAN/control
+	echo "Maintainer: <AlexanderRest@git.com>" >> deb_pkg/DEBIAN/control
 	echo "Description: myRPC Client Application" >> deb_pkg/DEBIAN/control
 	
 	# Build the package
