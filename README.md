@@ -48,7 +48,7 @@ sudo mkdir -p /etc/myRPC
 echo -e "port=8080\nsocket_type=stream" | sudo tee /etc/myRPC/myRPC.conf
 ```
 ```bash
-echo "your_username" | sudo tee /etc/myRPC/users.conf
+echo "AlexanderRest" | sudo tee /etc/myRPC/users.conf
 ```
 
 ## Использование
