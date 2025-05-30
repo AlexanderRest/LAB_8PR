@@ -89,26 +89,3 @@ Thumbs.db
 *.log
 *.cache
 *.tmp
-
-# Python-specific
-__pycache__/
-*.py[cod]
-*.egg-info/
-.venv/
-venv/
-
-# Java-specific
-*.class
-*.jar
-*.war
-*.ear
-*.nar
-bin/
-target/
-
-# JavaScript/React
-.yarn/
-.pnp.js
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
