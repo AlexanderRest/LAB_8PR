@@ -23,10 +23,12 @@ static void trim_whitespace(char *str) {
 }
 
 Config parse_config(const char *filename) {
+    // Значения по умолчанию
+    static const char *default_socket_type = "stream";
+    
     Config config = {
         .port = 0,
-        .socket_type = "stream",
-        .user = "root"  // Значение по умолчанию
+        .socket_type = default_socket_type
     };
 
     if (filename == NULL) {
@@ -61,12 +63,8 @@ Config parse_config(const char *filename) {
             config.port = atoi(value);
         } 
         else if (strcmp(key, "socket_type") == 0) {
-            strncpy(config.socket_type, value, MAX_STRING_LEN - 1);
-            config.socket_type[MAX_STRING_LEN - 1] = '\0';
-        }
-        else if (strcmp(key, "user") == 0) {
-            strncpy(config.user, value, MAX_STRING_LEN - 1);
-            config.user[MAX_STRING_LEN - 1] = '\0';
+            // Сохраняем указатель на значение в строке
+            config.socket_type = value;
         }
     }
 
